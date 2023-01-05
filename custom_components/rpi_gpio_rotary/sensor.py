@@ -71,7 +71,7 @@ class RotaryEncoderSensor(Entity):
         super().__init__()
         """Initialize one-color PWM LED."""
         self._name = name
-        self._state = None
+        self._state = 0
         self._available = True
         self.button = button
         self.encoder = encoder
