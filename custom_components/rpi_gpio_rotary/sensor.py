@@ -15,6 +15,8 @@ import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.typing import ConfigType, DiscoveryInfoType
 
+from .const import ATTR_Test, ATTR_VALUE
+
 _LOGGER = logging.getLogger(__name__)
 
 CONF_ENCODERS = "encoders"
@@ -95,5 +97,5 @@ class RotaryEncoderSensor(Entity):
         return self.attrs
     
     def update():
-        self.attrs["ATTR_VALUE"]=self.encoder.value
+        self.attrs[ATTR_VALUE]=self.encoder.value
 
