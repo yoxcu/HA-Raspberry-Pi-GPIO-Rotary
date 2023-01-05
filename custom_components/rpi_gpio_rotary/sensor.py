@@ -98,5 +98,5 @@ class RotaryEncoderSensor(Entity):
     
     def update(self):
         self.attrs[ATTR_VALUE]=self.encoder.value
-        self.state = self.encoder.value
+        self._state = self.encoder.value
 
