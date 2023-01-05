@@ -103,6 +103,6 @@ class RotaryEncoderSensor(Entity):
     
     def update_Home_Assistant(self):
         self.attrs[ATTR_VALUE]=self.encoder.value
-        self._state = self.encoder.value
+        self._state = int((self.encoder.value+1)*50)
         self.async_write_ha_state()
 
