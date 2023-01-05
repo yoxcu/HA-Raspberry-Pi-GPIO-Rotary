@@ -53,7 +53,6 @@ def setup_platform(
     add_entities: Callable,
     discovery_info: DiscoveryInfoType | None = None,
 ) -> None:
-    coordinator = hass.data[DOMAIN][config_entry.entry_id]
     """Set up the PWM LED lights."""
     encoders = []
     for encoder_conf in config[CONF_ENCODERS]:
