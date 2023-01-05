@@ -12,6 +12,7 @@ from homeassistant.components.sensor import PLATFORM_SCHEMA
 
 from homeassistant.const import CONF_HOST, CONF_PORT, CONF_NAME
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.typing import ConfigType, DiscoveryInfoType
 
 _LOGGER = logging.getLogger(__name__)
