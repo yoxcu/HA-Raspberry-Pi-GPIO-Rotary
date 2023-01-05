@@ -53,6 +53,7 @@ def setup_platform(
     add_entities: Callable,
     discovery_info: DiscoveryInfoType | None = None,
 ) -> None:
+    coordinator = hass.data[DOMAIN][config_entry.entry_id]
     """Set up the PWM LED lights."""
     encoders = []
     for encoder_conf in config[CONF_ENCODERS]:
@@ -75,6 +76,7 @@ class RotaryEncoderSensor(Entity):
         self._available = True
         self.button = button
         self.encoder = encoder
+        self.encoder.when_rotated = self.update_Home_Assistant()
         self.attrs: Dict[str, Any] = {ATTR_Test: "Test", ATTR_VALUE: 0}
 
 
@@ -95,8 +97,13 @@ class RotaryEncoderSensor(Entity):
     @property
     def device_state_attributes(self) -> Dict[str, Any]:
         return self.attrs
+
+    @property
+    def should_poll(self):
+        return False
     
-    def update(self):
+    def update_Home_Assistant(self):
         self.attrs[ATTR_VALUE]=self.encoder.value
         self._state = self.encoder.value
+        self.async_write_ha_state()
 
