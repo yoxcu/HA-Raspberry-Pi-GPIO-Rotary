@@ -75,8 +75,8 @@ class RotaryEncoderSensor(Entity):
         self._available = True
         self.button = button
         self.encoder = encoder
-        self.encoder.when_rotated = self.update_Home_Assistant()
         self.attrs: Dict[str, Any] = {ATTR_Test: "Test", ATTR_VALUE: 0}
+        self.encoder.when_rotated = self.update_Home_Assistant
 
 
     @property
