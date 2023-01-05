@@ -96,6 +96,6 @@ class RotaryEncoderSensor(Entity):
     def device_state_attributes(self) -> Dict[str, Any]:
         return self.attrs
     
-    def update():
+    def update(self):
         self.attrs[ATTR_VALUE]=self.encoder.value
 
