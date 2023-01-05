@@ -1,0 +1,11 @@
+{
+  "codeowners": ["@yoxcu"],
+  "config_flow": false,
+  "dependencies": [],
+  "documentation": "https://github.com/yoxcu/HA-Raspberry-Pi-GPIO-Rotary",
+  "domain": "rpi_gpio_rotary",
+  "iot_class": "local_polling",
+  "name": "Raspberry Pi GPIO Rotary Encoder",
+  "requirements": ["gpiozero==1.6.2", "pigpio==1.78"],
+  "version": "1.0.0"
+}

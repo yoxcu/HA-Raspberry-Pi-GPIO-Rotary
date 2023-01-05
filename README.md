@@ -1,1 +1,3 @@
-# HA-Raspberry-Pi-GPIO-Rotary
+# Raspberry Pi GPIO Rotary Encoder for Home Assistant
+
+## Installation
