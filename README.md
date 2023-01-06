@@ -1,7 +1,7 @@
 # Raspberry Pi GPIO Rotary Encoder for Home Assistant
-# Home Assistant Raspberry Pi GPIO PWM custom integration
 
 **This code is heavily inspired by https://github.com/RedMeKool/HA-Raspberry-pi-GPIO-PWM**
+
 For controlling the GPIOs, the platform connects to the pigpio-daemon (http://abyz.me.uk/rpi/pigpio/pigpiod.html), which must be running. On Raspbian Jessie 2016-05-10 or newer the pigpio library is already included. On other operating systems it needs to be installed first (see installation instructions: https://github.com/soldag/python-pwmled#installation).
 
 For Home Assistant this daemon can be installed as an add-on (https://github.com/Poeschl/Hassio-Addons/tree/master/pigpio).
@@ -10,7 +10,7 @@ For Home Assistant this daemon can be installed as an add-on (https://github.com
 
 ### HACS
 
-The recommend way to install `ha-rpi-gpio-rotary` is through [HACS](https://hacs.xyz/), by adding the repository url with category `integration`.
+The recommend way to install `ha-rpi-gpio-rotary` is through [HACS](https://hacs.xyz/), by adding this repository url with category `integration`.
 
 ### Manual installation
 
