@@ -1,4 +1,4 @@
-"""Support for LED lights that can be controlled using PWM."""
+"""Support for Rotary Ecoders with Push Button."""
 from __future__ import annotations
 
 import logging
@@ -53,7 +53,7 @@ def setup_platform(
     add_entities: Callable,
     discovery_info: DiscoveryInfoType | None = None,
 ) -> None:
-    """Set up the PWM LED lights."""
+    """Set up the Rotary Encoder and Push Button."""
     entities = []
     for encoder_conf in config[CONF_ENCODERS]:
         pinA = encoder_conf[CONF_PINA]
@@ -75,7 +75,7 @@ def setup_platform(
 class RotaryEncoderSensor(Entity):
     def __init__(self, encoder, name):
         super().__init__()
-        """Initialize one-color PWM LED."""
+        """Initialize the Rotary Encoder"""
         self._name = name
         self._state = 0
         self._available = True
@@ -114,7 +114,7 @@ class RotaryEncoderSensor(Entity):
 class ButtonSensor(Entity):
     def __init__(self, button, name):
         super().__init__()
-        """Initialize one-color PWM LED."""
+        """Initialize the Push Button."""
         self._name = name
         self._state = "off"
         self._available = True
